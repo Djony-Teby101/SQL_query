@@ -4,3 +4,11 @@ SELECT departement,
 	COUNT(*) AS nb_employes,
     SUM(salaire) AS masse_salariale
 FROM employes GROUP BY departement
+
+# Having S'applique uniquement sur les Group By pour remplacer le mots clé WHERE.
+
+SELECT departement,
+	COUNT(*) AS nb_employes,
+    SUM(salaire) AS masse_salariale
+FROM employes GROUP BY departement
+HAVING COUNT(*) = 2;
